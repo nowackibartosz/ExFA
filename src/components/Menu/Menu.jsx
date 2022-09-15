@@ -1,6 +1,6 @@
 import React from "react";
 import "./Menu.css";
-
+import { FaBeer } from "react-icons/fa";
 const Menu = ({ menu }) => {
   return (
     <div className="menu">
@@ -9,6 +9,7 @@ const Menu = ({ menu }) => {
           <li key={index}>
             {/* {el.icon} */}
             <br />
+            <FaBeer />
             <a href={el.link}>{el.linkName}</a>
           </li>
         ))}

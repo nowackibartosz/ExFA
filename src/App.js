@@ -2,7 +2,7 @@ import "./App.css";
 import Card from "./components/Card/Card";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Menu from "./components/Menu/Menu";
-
+import { FaBeer } from "react-icons/fa";
 const menuData = [
   {
     linkName: "Klienci",
@@ -83,6 +83,7 @@ function App() {
           />
         ))}
       </Wrapper>
+      <FaBeer />
       <Menu menu={menuData} />
     </div>
   );
