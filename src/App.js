@@ -2,7 +2,38 @@ import "./App.css";
 import Card from "./components/Card/Card";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Menu from "./components/Menu/Menu";
-import { FaBeer } from "react-icons/fa";
+import Tree from "./components/Tree/Tree";
+
+const data = [
+  {
+    file: "documents",
+    subFiles: [
+      {
+        file: "27-10-1990",
+      },
+      {
+        file: "invoices",
+        subFiles: [
+          {
+            file: "electricityBills",
+            subFiles: [{ file: "invoice1" }, { file: "invoice2" }],
+          },
+          { file: "invoice12" },
+        ],
+      },
+    ],
+  },
+  {
+    file: "photos",
+    subFiles: [
+      {
+        file: "summer2020",
+        subFiles: [{ file: "10.25" }, { file: "10.26" }, { file: "10.27" }],
+      },
+    ],
+  },
+];
+
 const menuData = [
   {
     linkName: "Klienci",
@@ -83,8 +114,9 @@ function App() {
           />
         ))}
       </Wrapper>
-      <FaBeer />
+
       <Menu menu={menuData} />
+      <Tree data={data} key={data.file} />
     </div>
   );
 }

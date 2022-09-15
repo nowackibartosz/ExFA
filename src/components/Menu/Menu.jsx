@@ -7,10 +7,15 @@ const Menu = ({ menu }) => {
       <ul>
         {menu.map((el, index) => (
           <li key={index}>
-            {/* {el.icon} */}
+            {" "}
             <br />
-            <FaBeer />
-            <a href={el.link}>{el.linkName}</a>
+            {/* {el.icon} */}
+            <a href={el.link}>
+              <FaBeer /> <br />
+              {el.linkName}
+            </a>
+            <br />
+            <br />
           </li>
         ))}
       </ul>
