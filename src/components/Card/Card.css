@@ -1,0 +1,20 @@
+.card {
+  display: flex;
+  height: 400px;
+  width: 600px;
+  border: 2px solid black;
+}
+
+.avatar {
+  height: 280px;
+  width: 280px;
+  margin: 60px 10px;
+  border-radius: 50%;
+  background-color: bisque;
+  text-align: center;
+  justify-content: center;
+}
+
+.card__info {
+  margin: 80px 30px;
+}
