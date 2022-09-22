@@ -10,5 +10,4 @@ const Tree = ({ data, key }) => {
     </div>
   );
 };
-
 export default Tree;
