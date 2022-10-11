@@ -35,17 +35,26 @@ import React from "react";
 const Tree = ({ data }) => {
   console.log("File tree", data);
   return (
-    <div style={{ border: "solid 1px black" }}>
+    <div>
       {data.map((el) => {
         if ("subFiles" in el) {
+          console.log("subfiles", el.subFiles);
+
+          return 
+        }
+      })}
+
+      {/* {data.map((el) => {
+        if ("subFiles" in el) {
           console.log("subfiles", el);
-          return el.subFiles((x) => {
-            return <Tree data={x} />;
-          });
+
+          // return el.subFiles((x) => {
+          //   return <Tree data={x} />;
+          // });
         } else {
           return <p>{el.file}</p>;
         }
-      })}
+      })} */}
     </div>
   );
 };

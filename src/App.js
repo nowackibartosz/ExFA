@@ -3,7 +3,7 @@ import Card from "./components/Card/Card";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Menu from "./components/Menu/Menu";
 import Tree from "./components/Tree/Tree";
-
+import Zad6 from "./components/Zad6/Zad6";
 const data = [
   {
     file: "documents",
@@ -99,6 +99,9 @@ const cards = [
 function App() {
   return (
     <div className="App">
+      <Zad6 />
+      <br />
+
       <Wrapper>
         {cards.map((el) => (
           <Card
@@ -116,7 +119,7 @@ function App() {
       </Wrapper>
 
       <Menu menu={menuData} />
-      <Tree data={data} key={data.file} />
+      {/* <Tree data={data} key={data.file} /> */}
     </div>
   );
 }
