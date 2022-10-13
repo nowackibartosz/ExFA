@@ -32,30 +32,72 @@ import React from "react";
   },
 ];*/
 
-const Tree = ({ data }) => {
-  console.log("File tree", data);
+const Tree = ({ data, key }) => {
   return (
-    <div>
-      {data.map((el) => {
-        if ("subFiles" in el) {
-          console.log("subfiles", el.subFiles);
-
-          return 
-        }
-      })}
-
-      {/* {data.map((el) => {
-        if ("subFiles" in el) {
-          console.log("subfiles", el);
-
-          // return el.subFiles((x) => {
-          //   return <Tree data={x} />;
-          // });
-        } else {
-          return <p>{el.file}</p>;
-        }
-      })} */}
-    </div>
+    <>
+      <ul>
+        {data.map((el) => {
+          if ("subFiles" in el) {
+            console.log("subFiles" in el);
+            return (
+              <>
+                <li key={key}>{el.file}</li>
+                {<Tree data={el.subFiles} />}
+              </>
+            );
+          } else {
+            return (
+              <>
+                <li key={key}>{el.file}</li>
+                {/* {<Tree data={el.subFiles} />} */}
+              </>
+            );
+          }
+        })}
+      </ul>
+    </>
   );
 };
+
 export default Tree;
+
+// {/* <>
+// <ul>
+//   {data.map((el) => {
+//     if ("subFiles" in el) {
+//       return (
+//         <>
+//           <li key={key}>{el.file}</li>
+//         </>
+//       );
+//     } else {
+//       return (
+//         <>
+//           <li key={key}>{el.file}</li>
+//           {<Tree data={el.subFiles} />}
+//         </>
+//       );
+//     }
+//   })}
+// </ul>
+// </> */}
+
+//
+//
+//
+/////
+//
+//
+///
+///
+///
+///
+
+///
+//  {/* {data.map((el) => {
+//         if ("subFiles" in el) {
+//           console.log("subfiles", el.subFiles);
+
+//           return
+//         }
+//       })} */}

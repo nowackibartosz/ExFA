@@ -119,7 +119,7 @@ function App() {
       </Wrapper>
 
       <Menu menu={menuData} />
-      {/* <Tree data={data} key={data.file} /> */}
+      <Tree data={data} key={data.file} />
     </div>
   );
 }

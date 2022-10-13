@@ -2,7 +2,7 @@
 // Do strony na której znajdują się karty z danymi klientów (Cards - zestaw zadań do komponentów) dodaj formularz u góry który umożliwi wyszukiwanie klienta po jego imieniu.
 
 // ### Podpowiedź
-// Do realizacji zadania przyda się osobny stan, który przechowa frazę wyszukiwaną i filtr
+// Do realizacji zadania przyda się osobny stan, który przechowa frazę wyszukiwaną i filtr\\
 
 import React from "react";
 
