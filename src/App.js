@@ -99,7 +99,7 @@ const cards = [
 function App() {
   return (
     <div className="App">
-      <Zad6 />
+      <Zad6 data={data} />
       <br />
 
       <Wrapper>

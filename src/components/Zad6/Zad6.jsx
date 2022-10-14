@@ -6,7 +6,8 @@
 
 import React from "react";
 
-const Zad6 = () => {
+const Zad6 = ({ data }) => {
+  console.log(data);
   return (
     <div>
       <label htmlFor="name">name</label>
