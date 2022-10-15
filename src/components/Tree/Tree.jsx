@@ -1,36 +1,11 @@
 import React from "react";
 
-/*const data = [
-  {
-    file: "documents",
-    subFiles: [
-      {
-        file: "27-10-1990",
-      },
-      {
-        file: "invoices",
-        subFiles: [
-          {
-            file: "electricityBills",
-            subFiles: [{ file: "invoice1" }, { file: "invoice2" }],
-          },
-          { file: "invoice12" },
-        ],
-      },
-    ],
-  },
-  {
-    file: "photos",
-    subFiles: [
-      {
-        file: "summer2020",
-        subFiles: [{ file: "10.25" }, { file: "10.26" }, { file: "10.27" }],
-      },
+// ## Zadanie 10 (useState)
 
-      
-    ],
-  },
-];*/
+// Wróć do zadania File Tree Generator i pozwól na zwijanie i rozwijanie subFiles
+
+
+
 
 const Tree = ({ data, key }) => {
   return (
