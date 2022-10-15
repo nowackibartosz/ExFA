@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import Card from "./components/Card/Card";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Menu from "./components/Menu/Menu";
@@ -97,25 +98,42 @@ const cards = [
 ];
 
 function App() {
+  const [card, setCard] = useState(cards);
+
+  const filterNames = (e) => {
+    const search = e.target.value.toLowerCase();
+
+    const filteredNames = cards.filter((nami) =>
+      nami.name.toLowerCase().includes(search)
+    );
+    setCard(filteredNames);
+  };
+
   return (
     <div className="App">
-      <Zad6 cards={cards} />
+      {/* <Zad6 cards={cards} /> */}
       <br />
 
+      <div>
+        <label htmlFor="name">name</label>
+        <input onChange={(e) => filterNames(e)} type="text" name="name" />
+      </div>
       <Wrapper>
-        {cards.map((el) => (
-          <Card
-            key={el.id}
-            avatar={el.imgSrc}
-            name={el.name}
-            surname={el.surname}
-            street={el.street}
-            postCode={el.postCode}
-            town={el.town}
-            subRegion={el.subRegion}
-            phoneNumber={el.phoneNumber}
-          />
-        ))}
+        <>
+          {card.map((el) => (
+            <Card
+              key={el.id}
+              avatar={el.imgSrc}
+              name={el.name}
+              surname={el.surname}
+              street={el.street}
+              postCode={el.postCode}
+              town={el.town}
+              subRegion={el.subRegion}
+              phoneNumber={el.phoneNumber}
+            />
+          ))}
+        </>
       </Wrapper>
 
       <Menu menu={menuData} />
