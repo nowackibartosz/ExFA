@@ -38,7 +38,6 @@ const Tree = ({ data, key }) => {
       <ul>
         {data.map((el) => {
           if ("subFiles" in el) {
-            console.log("subFiles" in el);
             return (
               <>
                 <li key={key}>{el.file}</li>
