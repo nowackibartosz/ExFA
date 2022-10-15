@@ -23,7 +23,7 @@ const Tree = ({ data, key }) => {
             return (
               <>
                 <li key={key}>{el.file}</li>
-                {/* {<Tree data={el.subFiles} />} */}
+               
               </>
             );
           }
