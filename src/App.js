@@ -4,7 +4,7 @@ import Card from "./components/Card/Card";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Menu from "./components/Menu/Menu";
 import Tree from "./components/Tree/Tree";
-import Zad6 from "./components/Zad6/Zad6";
+
 const data = [
   {
     file: "documents",
@@ -96,6 +96,12 @@ const cards = [
     phoneNumber: "+48 123 456 789",
   },
 ];
+
+// ## Zadanie 6 (useState)
+// Do strony na której znajdują się karty z danymi klientów (Cards - zestaw zadań do komponentów) dodaj formularz u góry który umożliwi wyszukiwanie klienta po jego imieniu.
+
+// ### Podpowiedź
+// Do realizacji zadania przyda się osobny stan, który przechowa frazę wyszukiwaną i filtr\\
 
 function App() {
   const [card, setCard] = useState(cards);
