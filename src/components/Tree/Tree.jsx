@@ -1,13 +1,16 @@
 import React from "react";
-
+import { useState } from "react";
+import "./Tree.css";
 // ## Zadanie 10 (useState)
 
 // Wróć do zadania File Tree Generator i pozwól na zwijanie i rozwijanie subFiles
 
-
-
-
 const Tree = ({ data, key }) => {
+  const [vis, setVis] = useState(false);
+
+  const handleVis = () => {
+    setVis(!vis);
+  };
   return (
     <>
       <ul>
@@ -15,15 +18,17 @@ const Tree = ({ data, key }) => {
           if ("subFiles" in el) {
             return (
               <>
-                <li key={key}>{el.file}</li>
-                {<Tree data={el.subFiles} />}
+                <li onClick={handleVis} key={key}>
+                  <strong>{el.file}</strong>
+                </li>
+
+                {vis ? <Tree data={el.subFiles} /> : null}
               </>
             );
           } else {
             return (
               <>
                 <li key={key}>{el.file}</li>
-               
               </>
             );
           }
