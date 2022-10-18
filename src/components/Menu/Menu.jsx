@@ -10,7 +10,7 @@ const Menu = ({ menu }) => {
   const [visibilityMenu, setVisivilityMenu] = useState(false);
 
   const handleVisibility = () => {
-    setVisivilityMenu(!visibilityMenu);
+    setVisivilityMenu(prev=>!prev);
   };
 
   return (
