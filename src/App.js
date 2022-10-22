@@ -117,7 +117,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Zad6 cards={cards} /> */}
       <br />
 
       <div>
