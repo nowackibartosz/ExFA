@@ -5,7 +5,12 @@ import Wrapper from "./components/Wrapper/Wrapper";
 import Menu from "./components/Menu/Menu";
 import Tree from "./components/Tree/Tree";
 
-const data = [
+type File = {
+  file: string;
+  subFiles?: File[]
+}
+
+const data:File = [
   {
     file: "documents",
     subFiles: [
@@ -63,7 +68,7 @@ const menuData: Array<Obj> = [
   },
 ];
 
-interface cardo {
+interface Cardo {
   id: number;
   imgSrc: string;
   name: string;
@@ -74,7 +79,7 @@ interface cardo {
   subRegion: string;
   phoneNumber: string;
 }
-const cards: Array<cardo> = [
+const cards: Array<Cardo> = [
   {
     id: 1,
     imgSrc:
@@ -120,9 +125,9 @@ const cards: Array<cardo> = [
 // Do realizacji zadania przyda się osobny stan, który przechowa frazę wyszukiwaną i filtr\\
 
 function App() {
-  const [card, setCard] = useState<Array<cardo>>(cards);
+  const [card, setCard] = useState<Cardo[]>(cards);
 
-  const filterNames = (e) => {
+  const filterNames = (e:React.ChangeEvent<HTMLInputElement>) => {
     const search = e.target.value.toLowerCase();
 
     const filteredNames = cards.filter((nami) =>
@@ -158,7 +163,7 @@ function App() {
       </Wrapper>
 
       <Menu menu={menuData} />
-      <Tree data={data} key={data.file} />
+      <Tree data={data} />
     </div>
   );
 }

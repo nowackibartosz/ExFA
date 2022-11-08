@@ -5,7 +5,7 @@ import "./Tree.css";
 
 // Wróć do zadania File Tree Generator i pozwól na zwijanie i rozwijanie subFiles
 
-const Tree = ({ data, key }) => {
+const Tree = ({ data }:{data: }) => {
   const [vis, setVis] = useState(false);
 
   const handleVis = () => {
@@ -18,7 +18,7 @@ const Tree = ({ data, key }) => {
           if ("subFiles" in el) {
             return (
               <>
-                <li onClick={handleVis} key={key}>
+                <li onClick={handleVis} key={el.flie}>
                   <strong>{el.file}</strong>
                 </li>
 
