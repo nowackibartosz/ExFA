@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState } from "react";
-import Card from "./components/Card/Card";
+import Card from './components/Card/Card';
 import Wrapper from "./components/Wrapper/Wrapper";
 import Menu from "./components/Menu/Menu";
 import Tree from "./components/Tree/Tree";
@@ -35,7 +35,12 @@ const data = [
   },
 ];
 
-const menuData = [
+interface Obj {
+  linkName: string;
+  link: string;
+  icon: string;
+}
+const menuData: Array<Obj> = [
   {
     linkName: "Klienci",
     link: "/clients",
@@ -58,7 +63,18 @@ const menuData = [
   },
 ];
 
-const cards = [
+interface cardo {
+  id: number;
+  imgSrc: string;
+  name: string;
+  surname: string;
+  street: string;
+  postCode: string;
+  town: string;
+  subRegion: string;
+  phoneNumber: string;
+}
+const cards: Array<cardo> = [
   {
     id: 1,
     imgSrc:
@@ -104,7 +120,7 @@ const cards = [
 // Do realizacji zadania przyda się osobny stan, który przechowa frazę wyszukiwaną i filtr\\
 
 function App() {
-  const [card, setCard] = useState(cards);
+  const [card, setCard] = useState<Array<cardo>>(cards);
 
   const filterNames = (e) => {
     const search = e.target.value.toLowerCase();
