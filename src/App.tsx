@@ -10,35 +10,35 @@ type File = {
   subFiles?: File[]
 }
 
-const data:File = [
-  {
-    file: "documents",
-    subFiles: [
-      {
-        file: "27-10-1990",
-      },
-      {
-        file: "invoices",
-        subFiles: [
-          {
-            file: "electricityBills",
-            subFiles: [{ file: "invoice1" }, { file: "invoice2" }],
-          },
-          { file: "invoice12" },
-        ],
-      },
-    ],
-  },
-  {
-    file: "photos",
-    subFiles: [
-      {
-        file: "summer2020",
-        subFiles: [{ file: "10.25" }, { file: "10.26" }, { file: "10.27" }],
-      },
-    ],
-  },
-];
+// const data:File = [
+//   {
+//     file: "documents",
+//     subFiles: [
+//       {
+//         file: "27-10-1990",
+//       },
+//       {
+//         file: "invoices",
+//         subFiles: [
+//           {
+//             file: "electricityBills",
+//             subFiles: [{ file: "invoice1" }, { file: "invoice2" }],
+//           },
+//           { file: "invoice12" },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     file: "photos",
+//     subFiles: [
+//       {
+//         file: "summer2020",
+//         subFiles: [{ file: "10.25" }, { file: "10.26" }, { file: "10.27" }],
+//       },
+//     ],
+//   },
+// ];
 
 interface Obj {
   linkName: string;
@@ -69,6 +69,7 @@ const menuData: Array<Obj> = [
 ];
 
 interface Cardo {
+  
   id: number;
   imgSrc: string;
   name: string;
@@ -149,7 +150,7 @@ function App() {
           {card.map((el) => (
             <Card
               key={el.id}
-              avatar={el.imgSrc}
+              imgSrc={el.imgSrc}
               name={el.name}
               surname={el.surname}
               street={el.street}
@@ -163,7 +164,7 @@ function App() {
       </Wrapper>
 
       <Menu menu={menuData} />
-      <Tree data={data} />
+      {/* <Tree data={data} /> */}
     </div>
   );
 }

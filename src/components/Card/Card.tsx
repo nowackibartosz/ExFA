@@ -2,7 +2,7 @@ import React from "react";
 import "./Card.css";
 
 const Card = ({
-  avatar,
+  imgSrc,
   name,
   surname,
   street,
@@ -12,7 +12,7 @@ const Card = ({
   phoneNumber,
 }) => {
   const style = {
-    backgroundImage: `url(${avatar})`,
+    backgroundImage: `url(${imgSrc})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
