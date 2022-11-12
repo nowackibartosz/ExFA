@@ -10,7 +10,7 @@ const Card = ({
   town,
   subRegion,
   phoneNumber,
-}) => {
+}:Cardo) => {
   const style = {
     backgroundImage: `url(${imgSrc})`,
     backgroundSize: "cover",
