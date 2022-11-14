@@ -68,7 +68,7 @@ const menuData: Array<Obj> = [
   },
 ];
 
-interface Cardo {
+export interface Cardo {
   
   id: number;
   imgSrc: string;
@@ -149,6 +149,7 @@ function App() {
         <>
           {card.map((el) => (
             <Card
+              id = {el.id}
               key={el.id}
               imgSrc={el.imgSrc}
               name={el.name}

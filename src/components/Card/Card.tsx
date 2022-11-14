@@ -1,5 +1,7 @@
 import React from "react";
 import "./Card.css";
+import { Cardo } from "../../App"
+
 
 const Card = ({
   imgSrc,
