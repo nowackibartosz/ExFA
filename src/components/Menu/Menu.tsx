@@ -2,15 +2,13 @@ import React from "react";
 import "./Menu.css";
 import { FaBeer } from "react-icons/fa";
 import { useState } from "react";
-// ## Zadanie 8 (useState)
+import {menuData} from "../../App"
 
-// Wróć do zadania z menu z poprzedniego zestawu (komponenty) i dodaj przycisk umożliwiający jego zwijanie i rozwijanie, wykorzystaj useState
-
-const Menu = ({ menu }) => {
+const Menu = () => {
   const [visibilityMenu, setVisivilityMenu] = useState(false);
 
   const handleVisibility = () => {
-    setVisivilityMenu(prev=>!prev);
+    setVisivilityMenu((prev) => !prev);
   };
 
   return (
@@ -19,20 +17,21 @@ const Menu = ({ menu }) => {
       <br />
       <button onClick={handleVisibility}>POKAŻ/UKRYJ MENU</button>
       <ul>
-        {visibilityMenu ? (menu.map((el, index) => (
-          <li key={index}>
-            {" "}
-            <br />
-            {/* {el.icon} */}
-            <a href={el.link}>
-              <FaBeer /> <br />
-              {el.linkName}
-            </a>
-            <br />
-            <br />
-          </li>
-        ))) : null }
-        
+        {visibilityMenu
+          ? menuData.map((el, index) => (
+              <li key={index}>
+                {" "}
+                <br />
+                {/* {el.icon} */}
+                <a href={el.link}>
+                  <FaBeer /> <br />
+                  {el.linkName}
+                </a>
+                <br />
+                <br />
+              </li>
+            ))
+          : null}
       </ul>
     </div>
   );

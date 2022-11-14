@@ -1,14 +1,14 @@
 import "./App.css";
 import { useState } from "react";
-import Card from './components/Card/Card';
+import Card from "./components/Card/Card";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Menu from "./components/Menu/Menu";
 import Tree from "./components/Tree/Tree";
 
 type File = {
   file: string;
-  subFiles?: File[]
-}
+  subFiles?: File[];
+};
 
 // const data:File = [
 //   {
@@ -45,7 +45,7 @@ interface Obj {
   link: string;
   icon: string;
 }
-const menuData: Array<Obj> = [
+export const menuData: Array<Obj> = [
   {
     linkName: "Klienci",
     link: "/clients",
@@ -69,7 +69,6 @@ const menuData: Array<Obj> = [
 ];
 
 export interface Cardo {
-  
   id: number;
   imgSrc: string;
   name: string;
@@ -128,7 +127,7 @@ const cards: Array<Cardo> = [
 function App() {
   const [card, setCard] = useState<Cardo[]>(cards);
 
-  const filterNames = (e:React.ChangeEvent<HTMLInputElement>) => {
+  const filterNames = (e: React.ChangeEvent<HTMLInputElement>) => {
     const search = e.target.value.toLowerCase();
 
     const filteredNames = cards.filter((nami) =>
@@ -149,7 +148,7 @@ function App() {
         <>
           {card.map((el) => (
             <Card
-              id = {el.id}
+              id={el.id}
               key={el.id}
               imgSrc={el.imgSrc}
               name={el.name}
@@ -164,8 +163,7 @@ function App() {
         </>
       </Wrapper>
 
-      <Menu menu={menuData} />
-      {/* <Tree data={data} /> */}
+      <Menu />
     </div>
   );
 }
