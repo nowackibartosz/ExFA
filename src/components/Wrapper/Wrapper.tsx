@@ -1,8 +1,16 @@
 import React from "react";
 
 import "./Wrapper.css";
+import { Cardo } from "../../App"
 
-const Wrapper = ({ children }) => {
+
+// type ListProps = {
+//   children: Array<Cardo>;
+// };
+
+
+
+const Wrapper = ({ children}:any) => {
 
 
 

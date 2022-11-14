@@ -3,7 +3,7 @@ import { useState } from "react";
 import Card from "./components/Card/Card";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Menu from "./components/Menu/Menu";
-import Tree from "./components/Tree/Tree";
+// import Tree from "./components/Tree/Tree";
 
 type File = {
   file: string;
@@ -118,11 +118,8 @@ const cards: Array<Cardo> = [
   },
 ];
 
-// ## Zadanie 6 (useState)
-// Do strony na której znajdują się karty z danymi klientów (Cards - zestaw zadań do komponentów) dodaj formularz u góry który umożliwi wyszukiwanie klienta po jego imieniu.
 
-// ### Podpowiedź
-// Do realizacji zadania przyda się osobny stan, który przechowa frazę wyszukiwaną i filtr\\
+
 
 function App() {
   const [card, setCard] = useState<Cardo[]>(cards);
